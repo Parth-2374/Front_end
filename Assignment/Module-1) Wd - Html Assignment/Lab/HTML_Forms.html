@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
 </head>
 
 <body>
-    <form action="">
+    <form>
         <div>
-            <label for="Full Name">Full Name</label>
-            <input type="text" pattern="[A-Za-z]{3,7}" minlength="3" maxlength="7" requiredss>
+            <label for="Full Name">Full Name:-</label>
+            <input type="text" pattern="[A-Za-z]{3,7}" minlength="3" maxlength="7" required>
         </div>
-        <br><br>
+        <br>
         <div>
-            <label for="Email">Email</label>
+            <label for="Email">Email:-</label>
             <input type="email" pattern="[a-z0-9._]+@+[a-z]+\.+[a-z]{2,3}$" required>
         </div>
         <br>
         <div>
-            <label for="Phone Number">Phone Number</label>
-            <input type="tel" maxlength="10" pattern="[6-9][0-9]{9}">
+            <label for="Phone Number">Phone Number:-</label>
+            <input type="tel" maxlength="10" pattern="[6-9][0-9]{9}" required>
         </div>
         <br>
         <div>
 
-            <label for="Subject">Subject</label>
+            <label for="Subject">Subject:-</label>
             <select required>
                 <option value="" disabled selected>------Select Subject------</option>
                 <option>ENGLISH</option>
@@ -38,8 +38,8 @@
         </div>
         <br>
         <div>
-            <label for="">Message</label>
-            <textarea rows="5" cols="20" minlength="10" maxlength="20" required></textarea>
+            <label for="Message">Message:-</label><br>
+            <textarea rows="4" cols="30" minlength="5" maxlength="40" required></textarea>
 
         </div>
         <br>
