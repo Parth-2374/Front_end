@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            background: url(/imag/2210_w018_n002_1346a_p30_1346.jpg);
+            background-size: cover;
+            
+            margin: 300px auto;
+            position: relative;
+            /* padding: 10% 10%; */
+            overflow: hidden;
+        }
+        div::after{
+            content: "";
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid; */
+            /* margin:  auto; */
+            position: absolute;
+            top: 0px;
+            /* top: 0%; */
+            /* left: 50%; */
+            background-color: rgba(205, 214, 198, 0.267);
+            transform: translate(100%,-100%);
+            transition: .7s;  
+        }
+        div:hover::after{
+            transform: translate(0%,0%);
+            /* width: 100%; */
+        }
+        div::before{
+            content: "";
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid; */
+            position: absolute;
+            background-color:rgba(205, 214, 198, 0.267);
+            transform: translate(-100%,100%);
+            transition: .7s;
+        }
+        div:hover::before{
+            transform: translate(-0%,0%);
+        }
+         h5{
+            text-align: center;
+            /* border: 2px solid white; */
+            margin: 27% auto;
+            padding: 50px ;
+            /* margin: 20px; */
+            font-size: 25px;
+            color: white;
+            word-spacing: 2px;
+            letter-spacing: 2px;
+        }
+        span{
+            color: aqua;
+        } 
+    </style>
+</head>
+<body>
+    <div><h5>Flat <span>50%</span> Offer</h5></div>
+</body>
+</html>

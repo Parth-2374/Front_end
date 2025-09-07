@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: aqua;">
+    <h1 align="center">Student Registration Form</h1>
+    <form action="">
+        <table cellpadding="15" border="0">
+            <tr>
+                <td><label for="">Roll No:-</label></td>
+                <td><input type="text" size="50" pattern="[A-Za-z0-9]{4,8}" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Student Name:-</label></td>
+                <td><input type="text" placeholder="First Name" size="21" pattern="[A-Za-z]{4,8}" required> - <input
+                        type="text" placeholder="Last Name" size="21" pattern="[A-Za-z]{5,9}" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Father's Name</label></td>
+                <td><input type="text" size="50" placeholder="Father Name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Date Of Birth</label></td>
+                <td><input type="text" placeholder="Day" size="2" maxlength="2" pattern="[1-30]{2}" required> - <input
+                        type="text" placeholder="Month" size="2" maxlength="2" pattern="[1-12]{2}" required> - <input
+                        type="text" placeholder="Year" maxlength="4" size="2"> (DD-MM-YYYY)</td>
+
+            </tr>
+            <tr>
+                <td><label for="">Mobile NO:-</label></td>
+                <td><input type="text" size="1" value="+91"> - <input type="tel" maxlength="10" pattern="[6-9][0-9]{9}"
+                        required size="42"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email Id:-</label></td>
+                <td><input type="email" size="50"></td>
+            </tr>
+            <tr>
+                <td><label for="">Password:-</label></td>
+                <td><input type="password" size="50"></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender:-</label></td>
+                <td><input type="radio" name="x">Male <input type="radio" name="x">Female</td>
+            </tr>
+            <tr>
+                <td><label for="">Department:-</label></td>
+                <td><input type="checkbox">CSE <input type="checkbox">IT <input type="checkbox">ECE <input
+                        type="checkbox">Civil <input type="checkbox">Mech</td>
+            </tr>
+            <tr>
+                <td><label for="">Course:-</label>
+                <td><select>
+                        <option size="50" hidden>--------------------Select Current Course's---------------------
+                        </option>
+                        <option value="">C</option>
+                        <option value="">C++</option>
+                        <option value="">JAVA</option>
+                    </select>
+                </td>
+                </td>
+                <tr>
+                    <td><label for="">Student Photo:-</label></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td><label for="">City:-</label></td>
+                    <td><input type="text" size="50"></td>
+                </tr>
+                <tr>
+                    <td><label for=""> Address:-</label></td>
+                    <td><textarea name="" id=""rows="3" cols="50"></textarea></td>
+                </tr>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

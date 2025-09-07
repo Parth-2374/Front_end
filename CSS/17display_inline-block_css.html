@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main * {
+            border: 5px solid;
+            padding: 20px;
+            /* inline tag is use a block  */
+            display: block;
+        }
+        .main1 *{
+            border: 5px solid;
+            margin: 40px 0px;
+            padding: 10px;
+            display: inline;
+            /* bloxk tag is use a inline and inline tag is use a block but padding and marging is not 
+            detected */
+        }
+        .main2 *{
+            border: 5px solid;
+            margin: 30px 0px;
+            padding: 20px;
+            display: inline-block;
+            /* bloxk tag is use a inline and inline tag is use a block but padding and marging is 
+            detected */
+            
+        }
+        /* .main4{
+            height: 300px;
+            width: 200px;
+            border: 5px solid;
+            margin: auto;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="main4"></div> -->
+    <div class="main">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main1">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main2">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height:30px;
+            width: 80px;
+            /* border: 2px solid; */
+                background-color: black;
+                margin: 50px;
+
+        }
+        .main a{
+            /* margin: 40px; */
+            text-decoration: none;
+            color: white;
+            visibility: visible;
+        }
+        .box{
+            height: 25px;
+            width: 75px;
+            border: 2px solid aqua ;
+            transform: translate(-2%,-10%);
+            margin-top: -15px;
+            visibility: hidden;
+           
+            /* margin-top: 10px ;
+            margin-bottom:0px ;
+            margin-left:2px ;
+            margin-right:0px ; */
+        }
+        .main:hover .box{
+            visibility: visible;
+            height: 35px;
+            width: 85px;
+            transform: translate(-4%,-20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="">ShopNow</a>
+        <div class="box"></div>
+    </div>    
+</body>
+</html>

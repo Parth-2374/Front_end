@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-color: black; */
+        }
+        .main{
+            height: 400px;
+            width:  300px;
+            border: 16px solid rgba(255, 255, 255,0.15) ;
+            background: url(/imag/2210_w018_n002_1346a_p30_1346.jpg);
+            background-size: cover;
+            margin: 10%;
+            padding: 0%;
+            overflow: hidden;
+        }
+        .box{
+            height: 400px;
+            width:  300px;
+            border: 10px solid rgba(255, 255, 255,0.15) ;
+            background: url(/imag/2210_w018_n002_1346a_p30_1346.jpg); 
+            background-size: cover;
+            transform: translate(-5%,-2%);
+            visibility: hidden;
+            transition: 1s;
+
+        }
+        .main:hover .box{
+            transform: translate(-1%,-2%);
+            visibility: visible;
+        }
+        .box h3{
+            text-align: right;
+            margin-top: 150px;
+            margin-bottom: 0px;
+            margin-left:0px ;
+            margin-right: 37px ;
+            color: white;
+            letter-spacing:5px;
+            font-size: 25px;
+            visibility: visible;
+
+        }
+        .box h3::first-letter{
+            color: red;
+        }
+        .box2{
+            height: 300px;
+            width: 250px;
+            border: 5px solid red;
+            margin: 5%;
+            transform: translate(1%,-120%);
+            visibility: hidden;
+            transition: 1s;
+        }
+        .main:hover .box2{
+            transform: translate(4%,-120%);
+            visibility: visible;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="box"><h3>SALE</h3> </div>
+    <div class="box2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+             height: 100%;
+             background-color:orange;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            justify-content: center;
+            gap: 30px;
+            row-gap: 40px;
+            column-gap: 30px;
+            position: relative;
+            /* background-color: orange; */
+
+        }
+        .box{
+            height: 350px;
+            width: 250px;
+            border: 2px solid;
+            position: relative;
+        }
+        .box span{
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            margin-top: 0%;
+            margin-left: 82%;
+        }
+        .box .one{
+            /* position: absolute; */
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 0%;
+            padding: 5px;
+            transform: translate(0%,0%);
+            transition: 0.6s;
+        }
+        .box:hover .one{
+            transform: translate(0%,630%);
+        }
+        .img{
+            position: absolute;
+            height: 150px; 
+            width: 150px; 
+            border: 0px solid;
+            left: 40px;
+            background: url(/imag/shirt.jpeg); 
+            background-repeat: no-repeat;
+            /* background-position-x: 30px; */
+            background-size: 100% 100%; 
+            /* margin: 30px; */
+            /* transform: rotate(0deg); */
+             /* transform: scaleX(0.8);  */
+            transition: 0.3s; 
+            
+        } 
+        .box:hover .img {
+            transform: scale(-1,1); 
+        }
+
+       
+        .shirt{
+            color: red;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 180px;
+        }
+        .two{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .three a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .three{
+            height: 30px;
+            width: 150px;
+            border: 2px solid aqua;
+            background-color: aqua;
+            margin-bottom: 10px;
+            margin-left: 50px;
+            margin-top: -4%;
+
+        }
+        .four{
+            height: 30px;
+            width: 150px;
+            border: 2px solid aqua;
+            /* margin-bottom: 100px; */
+            margin-left: 35px;
+            margin-top: -43px;
+            transform: translate(-4,10);
+            visibility: hidden;
+        }
+        .box:hover .four{
+            height: 40px;
+            width: 170px;
+            transform: translate(2%,-12%);
+            visibility: visible;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box ">
+            <span>NEW</span>
+            <p class="one">QUICK VIEW</p>
+            <div class="img"></div>
+            <p class="shirt">Formal Blue Shirt</p>
+            <p class="two">$49.99 <del>$69.71</del></p>
+            <p class="three"><a href="">ADD TO CART</a>
+            <div class="four"></div></p>   
+        </div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div> 
+       
+        </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main {
+            height: 50px;
+            width: 50px;
+            border: 2px solid;
+            background-color: black;
+            color: white;
+            margin: 100px auto;
+            /* overflow: hidden; */
+        }
+         i{
+         margin: 15px;
+        }
+
+        .patt {
+            height: 50px;
+            width: 50px;
+            margin-top: -92%;
+            /* padding: 10px, 30px, 40px; */
+            background-color: rgba(13, 192, 236, 0.692);
+            transform: scale(1,1);
+            visibility: hidden;
+            transition: .5s;
+        }
+
+        .main:hover .patt {
+            visibility: visible;
+            margin-top: -92%;
+            transform: scale(0%);
+            /* margin: 0% auto; */
+        }
+
+        .main .patt i{
+            transform: scale(0);
+            visibility: visible;
+            color: white;
+            margin: 0px auto;
+        } 
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <i class="fa-solid fa-truck "> </i>
+
+        <div class="patt">
+            <!-- <div>
+                <i class="fa-solid fa-truck " style="color: white;visibility:visible;margin: 15px;"></i>
+            </div> -->
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
