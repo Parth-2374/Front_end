@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header start */
+.bar {
+    display: none;
+}
+
+.nav-img {
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-ul .nav-li {
+    /* position: absolute;
+    top: 0%; */
+    /* border: 2px solid; */
+    display: inline-block;
+
+
+}
+
+.party {
+    position: absolute;
+    top: 1%;
+    left: 64%;
+}
+
+.carnival {
+    position: absolute;
+    top: 1%;
+    left: 70%;
+}
+
+.About {
+    position: absolute;
+    top: 1%;
+    left: 78%;
+}
+
+.Contact {
+    position: absolute;
+    top: 1%;
+    left: 85%;
+}
+
+.search {
+    position: absolute;
+    top: 2%;
+    left: 96%;
+    font-size: 25px;
+    color: yellow;
+
+}
+
+.nav-li .nav-a {
+    font-size: 25px;
+    color: yellow;
+    font-weight: 400;
+    font-family: "Open Sans";
+    text-align: right;
+    text-decoration: none;
+}
+
+.header-con {
+    width: 100%;
+    /* border: 2px solid; */
+
+}
+
+.header-img {
+    position: relative;
+}
+
+.header-h2 {
+    width: 40%;
+    position: absolute;
+    top: 15%;
+    /* border: 2px solid; */
+    /* transform: translate(0px,-1000px); */
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #1b2f1d;
+    font-weight: 700;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+}
+
+.header-h5 {
+    /* border: 2px solid; */
+    /* transform: translate(0px,-990px); */
+    width: 40%;
+    position: absolute;
+    top: 36%;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #d04949;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+}
+
+.header-p {
+    /* border: 2px solid; */
+    /* transform: translate(0px,-980px); */
+    position: absolute;
+    top: 40%;
+    width: 40%;
+    font-size: 23px;
+    color: #6bbc6d;
+    font-weight: 400;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+}
+
+.header-btn {
+    /* border: 2px solid; */
+    /* transform: translate(40px,-950px); */
+    position: absolute;
+    top: 53%;
+    left: 0%;
+    width: 10%;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #d04949;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+
+}
+
+/* header end */
+
+/* section1 start */
+.sec1 {
+    /* border: 2px solid; */
+    position: relative;
+}
+
+.sec1 .sec1-con .sec1-h4 {
+    width: 50%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    font-size: 50px;
+    color: #264228;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+}
+
+.sec1 .sec1-con .sec1-p {
+    width: 40%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 21px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+}
+
+.sec1 .sec1-con .sec1-btn {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    width: 10%;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #d04949;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+    padding: 10px;
+}
+
+/* section1 end */
+
+/* section2 start */
+
+.sec2 {
+    /* border: 2px solid; */
+    position: relative;
+    margin-top: -60px;
+}
+
+.sec2 .sec2-con .sec2-h4 {
+    width: 50%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    font-size: 50px;
+    color: #264228;
+    font-weight: 700;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+}
+
+.sec2 .sec2-con .sec2-p {
+    width: 45%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-size: 21px;
+    color: #0fdf16fb;
+    font-weight: 500;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+}
+
+.sec2 .sec2-con .sec2-btn {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: 75%;
+    left: -2%;
+    width: 10%;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #d04949;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+    padding: 10px;
+}
+
+/* section2 end */
+
+/* section3 start */
+
+.sec3 {
+    /* border: 2px solid; */
+    position: relative;
+    margin-top: -60px;
+}
+
+.sec3 .sec3-con .sec3-h4 {
+    width: 50%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    font-size: 45px;
+    color: #838181;
+    font-weight: 800;
+    font-family: "Montserrat";
+    padding: 40px 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sec3 .sec3-con .sec3-p {
+    width: 50%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 31%;
+    left: 25%;
+    font-size: 25px;
+    color: #2d6933;
+    font-weight: 500;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.sec3 .sec3-con .sec3-btn {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: 53%;
+    left: 28%;
+    width: 10%;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #d04949;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Readex Pro";
+    margin: 0px 80px;
+    padding: 10px;
+}
+
+/* section3 end */
+
+/* section4 start */
+
+.sec4 {
+    display: flex;
+    /* border: 2px solid; */
+    /* position: relative; */
+    margin-top: -90px;
+}
+
+.sec4-img {
+    /* border: 2px solid; */
+    margin-right: 200px;
+}
+
+.sec4 .sec4-con .sec4-h4 {
+    /* border: 2px solid; */
+    width: 60%;
+    font-size: 48px;
+    color: #1b2f1d;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    margin: 90px 0px 0px 100px;
+    padding: 40px 60px;
+
+}
+
+.sec4 .sec4-con .sec4-p {
+    width: 60%;
+    /* border: 2px solid; */
+    font-size: 21px;
+    color: #e1b52c;
+    font-weight: 500;
+    font-family: "Readex Pro";
+    margin: -30px 0px 0px 100px;
+    padding: 40px 60px;
+
+}
+
+.sec4 .sec4-con .sec4-btn {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 19px;
+    background-color: green;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Readex Pro";
+    text-align: center;
+    margin: 30px 0px 20px 250px;
+    padding: 10px;
+}
+
+/* section4 end */
+
+/* section5 start */
+
+.sec5 {
+    /* border: 2px solid; */
+    position: relative;
+  
+}
+
+.sec5 .sec5-con .sec5-h4 {
+    width: 70%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    font-size: 40px;
+    color: #e2b62c;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sec5 .sec5-con .sec5-p {
+    width: 60%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    font-size: 21px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+    text-align: center;
+
+
+}
+
+/* section5 end */
+
+
