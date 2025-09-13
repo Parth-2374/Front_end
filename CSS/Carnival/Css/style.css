@@ -316,6 +316,9 @@
     /* border: 2px solid; */
     /* position: relative; */
     margin-top: -90px;
+    background: url(/image/background.png);
+    background-size: cover;
+
 }
 
 .sec4-img {
@@ -368,7 +371,7 @@
 .sec5 {
     /* border: 2px solid; */
     position: relative;
-  
+
 }
 
 .sec5 .sec5-con .sec5-h4 {
@@ -404,4 +407,305 @@
 
 /* section5 end */
 
+/* section6 start */
 
+.sec6 .row {
+    display: flex;
+    gap: 10px;
+    margin: 40px;
+}
+
+.sec6-col {
+    width: 50%;
+    /* border: 2px solid; */
+    box-shadow: 2px 5px 5px rgba(107, 105, 105, 0.966);
+}
+
+.sec6-col .form {
+    width: 10%;
+}
+
+.sec6-col {
+    background: url(/image/background.png);
+    background-size: cover;
+}
+
+.sec6-h4 {
+    width: 100%;
+    font-size: 50px;
+    color: #264228;
+    font-weight: 700;
+    font-family: "Montserrat";
+    /* border: 2px solid; */
+    margin: 90px 0px 0px 0px;
+    padding: 20px;
+}
+
+.sec6-p {
+    width: 100%;
+    font-size: 25px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Readex Pro";
+    /* border: 2px solid; */
+    margin: 10px 0px 0px 0px;
+    padding: 20px;
+}
+
+.sec6-btn {
+    width: 20%;
+    font-size: 19px;
+    color: #feffff;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    text-align: center;
+    background-color: #2d6933;
+    margin: 10px 0px 0px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+.sec6-col {
+    /* border: 2px solid; */
+    width: 100%;
+    position: relative;
+}
+
+.form {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    /* border: 2px solid; */
+    padding: 20px 0px 0px 0px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Readex Pro";
+}
+
+.form .x {
+    border: 2px solid white;
+    background-color: transparent;
+    width: 500px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form .x1 {
+    border: 2px solid white;
+    background-color: transparent;
+    width: 500px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sec6-form-btn {
+    /* width: 100%; */
+    background-color: transparent;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    border: 2px solid;
+    padding: 0px 0px 0px 0px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Readex Pro";
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 6px #d14949;
+}
+
+/* section6 end */
+
+/* section7 start */
+
+.sec7 {
+    /* border: 2px solid; */
+    position: relative;
+    margin-top: 60px;
+}
+
+.sec7 .sec7-con .sec7-h4 {
+    width: 100%;
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Readex Pro";
+    padding: 20px 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sec7 .sec7-con .sec7-p {
+    width: 60%;
+    /* border: 2px solid; */
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 21px;
+    color: #2d6933;
+    font-weight: 400;
+    font-family: "Readex Pro";
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.sec7 .sec7-con .sec7-btn {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    width: 10%;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #d04949;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Readex Pro";
+    margin: 0px 0px;
+    padding: 10px;
+}
+
+/* section7 end */
+
+/* footer strat */
+.footer {
+    /* border: 2px solid; */
+    position: relative;
+    margin-top: 30px;
+}
+
+.footer-menu-h5 .footer-menu-ul {
+    margin: 50px;
+    list-style: none;
+    /* border: 2px solid; */
+
+}
+
+.footer-menu-h5 .footer-menu-a {
+    color: yellow;
+    font-weight: 400;
+    font-family: "Open Sans";
+    text-align: right;
+    text-decoration: none;
+    margin: 20px;
+    /* border: 2px solid; */
+    font-size: 30px;
+    text-transform: uppercase;
+    /* padding: 100px; */
+
+}
+
+.footer-menu-p {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    /* padding: 0px 10px 0px 0px; */
+}
+
+.footer-menu-c {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    /* padding: 0px 10px 0px 0px; */
+}
+
+.footer-menu-e {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    /* padding: 0px 10px 0px 0px; */
+}
+
+.footer-menu-b {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    /* padding: 0px 10px 0px 0px; */
+}
+.footer-info-h4 .footer-info-ul {
+    margin: 50px;
+    list-style: none;
+    /* border: 2px solid; */
+
+}
+.footer-info-h4 .footer-info-a {
+    color: yellow;
+    font-weight: 400;
+    font-family: "Open Sans";
+    text-align: right;
+    text-decoration: none;
+    margin: 20px;
+    /* border: 2px solid; */
+    font-size: 30px;
+    text-transform: uppercase;
+    /* padding: 100px; */
+}
+.footer-info-x {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    /* padding: 0px 10px 0px 0px; */
+}
+.footer-info-y {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    /* padding: 0px 10px 0px 0px; */
+}
+.footer-info-z {
+    position: absolute;
+    top: 80%;
+    left: 37%;
+    /* padding: 0px 10px 0px 0px; */
+}
+.foot-info-icons .fac{
+    border: 2px solid black;
+    position: absolute;
+    top: 80%;
+    left: 82%;
+    font-size: 40px;
+    background-color: black;
+    color: blue;
+    border-radius: 5px;
+    /* padding: 0px 10px 0px 0px; */
+}
+.foot-info-icons .ins{
+    border: 2px solid black;
+    position: absolute;
+    top: 80%;
+    left: 88%;
+    font-size: 40px;
+    background-color: black;
+    color: #c51def;
+    border-radius: 5px;
+
+    /* padding: 0px 10px 0px 0px; */
+}
+.foot-info-icons .twi{
+    border: 2px solid black;
+    position: absolute;
+    top: 80%;
+    left: 94%;
+    font-size: 40px;
+    background-color: black;
+    color:white ;
+    border-radius: 5px;
+
+    /* padding: 0px 10px 0px 0px; */
+}
+
+/* footer end */
