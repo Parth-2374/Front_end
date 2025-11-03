@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div>
+                    <img src="/image/logo.png" alt="">
+                </div>
+                <form class="d-flex ps-3 w-75 " data-bs-toggle="modal" data-bs-target="#myModal" role="search">
+                    <input class="form-control  me-3  " type="search"
+                        placeholder="Search for Movies,Event,Plays,Sport and Activities" aria-label="Search" />
+                    <!-- The Modal -->
+                    <!-- <input  data-bs-toggle="modal" data-bs-target="#myModal"> -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog  ">
+                            <div class="modal-content ">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header ">
+                                    <input class="form-control rounded-pill w-75 mx-auto " type="search"
+                                        placeholder="Search for Movies,Event,Plays,Sport and Activities"
+                                        aria-label="Search" />
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                                    </button>
+                                </div>
+
+                                <div class="dropdown container">
+                                    <!-- <button class="btn btn-outline-danger rounded-pill "
+                                        data-bs-toggle="dropdown">Movies</button> -->
+                                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                                            <!-- <div class="carousel-indicators">
+                                              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                              
+                                            </div> -->
+                                          
+                                            <div class="carousel-inner">
+                                              <div class="carousel-item active">
+                                                <button class="btn btn-outline-danger rounded-pill ">Movies</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Stream</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Events</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Plays</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Sports</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Activities</button>
+                                              </div>
+                                              <div class="carousel-item">
+                                                <button class="btn btn-outline-danger rounded-pill">Venues</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Offers</button>
+                                                <button class="btn btn-outline-danger rounded-pill">Others</button>
+                                              </div>
+                                              
+                                            </div>
+                                          
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon bg-dark btn-dark ">
+                                              </span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon bg-dark btn-dark"></span>
+                                            </button>
+                                          </div>
+                                          
+                                        
+                                         
+                                         
+                                        </div>
+                                    <!-- <button class="btn btn-outline-danger rounded-pill ">Stream</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Events</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Plays</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Sports</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Activities</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Venues</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Offers</button>
+                                    <button class="btn btn-outline-danger rounded-pill">Others</button> -->
+
+                                    <!-- <button class="btn btn-light border border-dark text-danger" type="button" data-bs-toggle="dropdown">
+                                        Menu
+                                    </button> -->
+                                    <table class="table">
+                                        <ul class="dropdown-menu">
+                                            <h5 class="text-secondary ">TRENDING SEARCHES</h5>
+                                            <li class="dropdown-item  ">Kantara: A Legend Chapter-1</li>
+                                            <li class="dropdown-item">The Lavari Show</li>
+                                            <li class="dropdown-item">Demon Slayer: Kimetsu no Yaiba Infinity Castle
+                                            </li>
+                                            <li class="dropdown-item">THE WEEKND NIGHT - AHMEDABAD</li>
+                                            <li class="dropdown-item">Sunny Sanskari Ki Tulsi Kumari</li>
+                                            <li class="dropdown-item">Travis Scott: Circus Maximus Stadium Tour - Mumbai
+                                            </li>
+                                            <li class="dropdown-item">Millionaire Farmer of India Awards 2025 (MFOI)
+                                            </li>
+                                            <li class="dropdown-item">Travis Scott: Circus Maximus Stadium Tour - Delhi
+                                            </li>
+
+                                        </ul>
+                                    </table>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+
+
+
+          
+                    <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+<div class="card p-4 shadow-lg" style="width: 25rem;">
+    
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="card-title mb-0">Get Started</h5>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
+    <div class="card-body p-0">
+        
+        <button type="button" class="btn btn-outline-secondary w-100 mb-3 d-flex align-items-center justify-content-center py-2">
+            <span class="me-2 fw-bold" style="font-size: 1.2rem;">G</span> 
+            Continue with Google
+        </button>
+
+        <button type="button" class="btn btn-outline-secondary w-100 mb-3 d-flex align-items-center justify-content-center py-2">
+            <span class="me-2" style="font-size: 1.2rem;">✉</span> 
+            Continue with Email
+        </button>
+        
+        <button type="button" class="btn btn-outline-secondary w-100 mb-4 d-flex align-items-center justify-content-center py-2">
+            <span class="me-2 fw-bold" style="font-size: 1.2rem;"></span> 
+            Continue with Apple
+        </button>
+
+        <div class="text-center text-muted mb-4">
+            <small>OR</small>
+        </div>
+
+        <button type="button" class="btn btn-primary w-100 mb-4 d-flex align-items-center justify-content-center py-2">
+            <span class="me-2">🇮🇳 +91</span>
+            Continue with mobile number
+        </button>
+
+        <p class="card-text text-center text-muted small">
+            I agree to the 
+            <a href="#" class="text-decoration-none" style="color: #6c757d;">Terms & Conditions</a> 
+            & 
+            <a href="#" class="text-decoration-none" style="color: #6c757d;">Privacy Policy</a>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
+
