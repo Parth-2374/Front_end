@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //      for(let i=1; i<=5;i++){
+        //     for(let j=1;j<=i;j++){
+        //        document.write("*")
+        //     }
+        //         document.write("<br>")
+        // }
+
+        // 1     *
+        // 2    ** 
+        // 3   *** 
+        // 4  **** 
+        // 5 *****
+        for (let a = 1; a <= 5; a++) {
+            for (let b = a; b <= 5; b++) {
+                document.write("&nbsp;&nbsp;")
+            }
+            for (let c = 1; c <= a; c++) {
+                document.write("*")
+                // console.log("*")
+            }
+            document.write("<br>")
+
+        }
+        document.write("<br>")
+        document.write("<br>")
+
+        // 3 bar &nbsp; lagne par  cross me aata hai
+
+        // 2 bar &nsbp; lagne par left side space create karta hai
+
+        // 1 bar &nsbp; lagne par sab center line aata hai
+
+        // for (let x = 1; x <= 10; x++) {
+        //     for (let y = x; y <= 10; y++) {
+        //         if(!(x2)){
+        //         document.write("&nbsp;")
+        //         }
+        //     }
+        //     for (let z = 1; z <= x; z++) {
+        //         document.writeln("*")
+        //     }
+        //     document.write("<br>")
+
+        // }
+
+        for (let i = 1; i <= 5; i++) {
+            for (let y = i; y <=(5-i)/2; y++) {
+                
+                document.write("&nbsp;")
+             
+            }
+            for (let z = 1; z <= i; z++) {
+                document.writeln("*")
+            }
+            document.write("<br>")
+
+        }
+
+
+    </script>
+</body>
+
+</html>

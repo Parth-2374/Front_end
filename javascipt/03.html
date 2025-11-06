@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="var"></h3>
+    <h4 id="let"></h4>
+    <h5 id="const"></h5>
+
+    <script>
+
+        var x = 10; //Declaration
+        // var x = 11; //Re--Declaration allow
+        // x = 12; //Re--assigenment allow
+        // console.log("X=>" + x)
+        // console.log("X=>", x)
+        document.getElementById("var").innerHTML = "X :- " + x;
+
+        let y = 20; //Declaration
+        //    let y = 22;  //Re--Declaration allow
+        // y = 23; //Re--assigenment allow
+        // console.log("Y=>" +y)
+        // console.log("Y=>",y)
+        document.getElementById("let").innerHTML = "Y :- " + y;
+
+        const z = 30; //Declaration
+        // const z = 22;  //Re--Declaration allow
+        // z = 23; //Re--assigenment allow
+        //  console.log("Z=>"+z)
+        // console.log("Z=>",z)
+        document.getElementById("const").innerHTML = "Z :- " + z;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  for( let i=1;i<=5;i++)
+        //  for( let i=1;i<=10;i++){
+
+        //     if(i>=2 && i>=4)
+        //     console.log(i)
+        // // document.write(i)
+
+        //  }
+
+        // for( let i=1;i<=10;i++){
+        //     // if(i<=5)//1 2 3 4 5
+        //     // if(i>=5)//5 6 7 8 9 10
+        //     if(!(i>=2 && i<=5)) // ! not print value
+        //     {
+        //         console.log(i)
+        //     }
+        // }
+
+        //task is ABCD print
+        // for( let ch= 65; ch<=70;ch++){
+        //     console.log(String.fromCharCode(ch))
+        //     // ch++;
+        //     // console.log(ch)
+        // }
+
+        // nest loop use form ABCD
+        // A
+        // B C
+        // D E F
+        // G H I J
+        // K L M N O
+         let ch = 65;
+            for(let i=1;i<=5;i++){
+            for(let j=1;j<=i;j++){
+                document.write(String.fromCharCode(ch) + " "); 
+                ch++;
+            }
+                document.write("<br>")
+        }
+
+        // let ch = 65;
+        //     for(let ch=65; ch<=79;ch++){
+        //         for(let i=1;i<=5;i++){
+        //         for(let j=1;j<=i;j++){
+        //             document.write(String.fromCharCode(ch) + " "); 
+        //             // ch++;
+        //         }
+        //             document.write("<br>")
+        //     }
+        // }
+            document.writeln("<br>")
+
+        for (let i = 1; i <= 5; i++) {
+            for (let ch = 65; ch <= 79; ch++) {
+                document.write(String.fromCharCode(ch) + " ");
+            }
+                for (let j = 1; j <= i; j++) {
+                    // document.write(String.fromCharCode(ch) + " "); 
+                    // ch++;
+                }
+                document.write("<br>")
+            }
+        
+    </script>
+
+</body>
+
+</html>
