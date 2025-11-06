@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Guest Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Guest Registration Form</h1>
+        </header>
+        <form action="" id="guestform" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+                    <small class="error" id="err-fullName"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone Number" required maxlength="10"
+                        pattern="[6-9][0-9]{9}">
+                    <small class="error" id="err-phone"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                    <small class="error" id="err-email"></small>
+                </div>
+                <div class="form-group">
+                    <label for="aadhar">Aadhar Card Number</label>
+                    <input type="text" id="aadhar" name="aadhar" placeholder="Enter Aadhar Card Number"
+                        inputmode="numeric" maxlength="12" required>
+                    <small class="error" id="err-aadhar"></small>
+                </div>
+                <div class="form-group">
+                    <label for="checkin">Check in date</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                    <small class="error" id="err-checkin"></small>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check Out date</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                    <small class="error" id="err-checkout"></small>
+                </div>
+                <div class="form-group full-width">
+                    <label for="purpose">Purpose of Visit</label>
+                    <input type="text" id="purpose" name="purpose" placeholder="Business / Leisure / Other" required>
+                    <small class="error" id="err-purpose"></small>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" id="submitBtn">Sumbit</button>
+                <button type="reset" id="resetBtn">Reset</button>
+                <!-- <a class="view-link" href="view.html">View Submissions</a> -->
+            </div>
+            <div id="message" class="message" aria-live="polite"></div>
+        </form>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
