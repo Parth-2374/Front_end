@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var blance = 1000;
+        class Bank {
+            x = function Details(pin) {
+                let bankname = "ICICI Bank"
+                let bankIFCS = "ICICI0000457"
+                let pinnumber = pin
+
+                console.log("Bank Name :", bankname)
+                console.log("Bank IFCS :", bankIFCS)
+                console.log("Pin Number :", pinnumber)
+                console.log("Open Account Bank Blance :", blance)
+            }
+            Deposit(amount) {
+                blance += amount;
+                console.log("Deposit Successful Current Bank Blance :", blance)
+            }
+            withdraw(amount) {
+                if (amount <= 0) {
+                    console.log("Invalid amount");
+
+                } else if (amount > blance) {
+                    console.log("Insuffcient blance")
+                }
+                else {
+                    blance -= amount;
+                    console.log("Withdraw Successful Current Bank Balnce :", blance)
+                }
+            }
+            chekblance() {
+                console.log("Current Bank Blance :", blance)
+            }
+        }
+        const user = new Bank
+        console.log(user)
+        user.x(123)
+        user.Deposit(100) // blance 1100
+        user.withdraw(200) // blance 900
+        user.chekblance() // blance 900
+        user.withdraw(-30) // neg not vaild
+        user.withdraw(1000) // blance hi nahi hai 
+        user.withdraw(900) // blance 0
+        user.Deposit(100)  // blance 100
+
+
+
+    </script>
+</body>
+
+</html>
