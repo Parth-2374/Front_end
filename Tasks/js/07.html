@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Universityname</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        fetch("https://dummyjson.com/users",{
+            method:"GET"
+        })
+        .then((res)=>{
+            return res.json()
+        })
+        .then((sus)=>{
+            console.log(sus)
+            sus.users.forEach((data,index) => {
+                console.log(data)
+           
+            let tbody = document.querySelector("tbody")
+
+            let trow =tbody.insertRow()
+            let idcell= trow.insertCell(0)
+            let namecell= trow.insertCell(1)
+            let emailcell =trow.insertCell(2)
+            let universitycell =trow.insertCell(3)
+            let departmentcell =trow.insertCell(4)
+
+
+            idcell.textContent = data.id
+            namecell.textContent = data.firstName
+            emailcell.textContent = data.email
+            universitycell.textContent = data.university
+            departmentcell.textContent = data.company.department
+        });
+        })
+    </script>
+</body>
+</html>

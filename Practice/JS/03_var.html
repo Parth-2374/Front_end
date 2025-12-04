@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var delcaration ,re--delcaration allow, re-assigenment allow
+        var a=10
+        var _a="hii"
+        console.log(_a);
+
+        var $123 =50;
+        console.log($123)
+
+        //let delcaration ,re--delcaration not allow, re-assigenment allow
+        let x= 20;
+        // let x=50;
+        x=30;
+        console.log(x);
+        
+
+        // const delcaration ,re--delcaration not allow, re-assigenment not allow
+        const z= 20;
+        // const z=50;
+        // z=30;
+        console.log(z)
+        
+        // {
+        //     let y =40; // var is work inside and outside but let not work outside same in const
+        //     console.log("Y:-",y);
+            
+        // }
+        // console.log("Y:-",y);
+
+        // const y = 50;  // var ,let ,const is work inside and outside 
+        // console.log("Y:-",y);
+        // {
+        //     console.log("Y:-",y);
+            
+        // }
+       
+        function data(){
+            window.x = "hiii";
+            document.write(window.x,"<br>");
+        }
+        data()
+        function user(){
+            document.write(window.x)
+            
+        }
+        data()
+        
+    </script>   
+    <button onclick="user" >sum</button> 
+</body>
+</html>

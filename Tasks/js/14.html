@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        // function abc(){ 
+        //     fetch("https://691c669f3aaeed735c90b04d.mockapi.io/admin",{
+        //     method:"GET"
+        // })
+        // .then((res)=>{
+        //     return res.json()
+        // })
+        // .then((res)=>{
+        //     console.log(res)
+        //     for (const data of res) {
+        //         console.log(data)
+                
+        //     }
+        // })
+        // }
+        // abc()
+        
+            let data = async () => {
+                let res = await axios.get("https://691c669f3aaeed735c90b04d.mockapi.io/admin")
+                console.log(res.data)
+            }
+            data()
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1" id="myTable">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <script>
+        fetch("data.json", {
+            method: "GET"
+        })
+        .then((res) =>{
+        return res.json()}
+
+    )
+        .then((res) => {
+            let table = document.getElementById("myTable");
+
+            res.admin.forEach((data) => {
+                table.innerHTML += `
+                    <tr>
+                        <td>${data.id}</td>
+                        <td>${data.name}</td>
+                        <td>${data.email}</td>
+                    </tr>
+                `;
+            });
+        })
+    </script>
+
+</body>
+</html>

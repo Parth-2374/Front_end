@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Universityname</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+            const user = async () => {
+                let res = await axios.get("https://dummyjson.com/users")
+                console.log(res.data)
+
+                res.data.users.forEach((data,index) => {
+                    console.log(data)
+                });
+
+                    document.querySelector("tbody").innerHTML += res.data.users.map((data,index)=>{
+                        return (`
+                         
+                         <tr>
+                             <td>${data.id}</td>
+                             <td>${data.firstName}</td>
+                             <td>${data.email}</td>
+                             <td>${data.university}</td>
+                             <td>${data.company.department}</td>
+     
+                         </tr>
+                         
+                         
+                         `)
+
+                    }).join("")
+                   
+               
+
+            }
+            user()
+    </script>
+</body>
+</html>

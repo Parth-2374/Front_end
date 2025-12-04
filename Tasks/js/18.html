@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>username</th>
+                <th>companyname</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+                const getuser = async()=>{
+            const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+            console.log(res.data)
+            res.data.forEach((data,index) => {
+                console.log(data);
+                
+                let trow = document.querySelector("tbody")
+                let tbody= trow.insertRow()
+                let idcell= tbody.insertCell(0)
+                let namecell=tbody.insertCell(1)
+                let emailcell=tbody.insertCell(2)
+                let usernamecell=tbody.insertCell(3)
+                let companynamecell=tbody.insertCell(4)
+
+
+                idcell.textContent=data.id
+                namecell.textContent=data.name
+                emailcell.textContent=data.email
+                usernamecell.textContent=data.username
+                companynamecell.textContent=data.company.name
+            });
+
+
+        }
+        getuser()
+
+
+    </script>
+</body>
+</html>

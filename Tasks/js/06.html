@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="6px">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>phone</th>
+            </tr>
+        </thead>
+       
+        <tbody class="a">
+
+        </tbody>
+        
+    </table><br><br>
+    <table border="6">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody class="b">
+
+        </tbody>
+    </table>
+
+    <script>
+        fetch("https://fakestoreapi.com/users",{
+            method:"GET"
+        })
+        .then((res)=>{
+            return res.json()
+        })
+        .then((sus)=>{
+            console.log(sus)
+            sus.forEach((data,index) => {
+                console.log(data)
+            });
+            
+            let htmldata =  sus.map((data,index)=>{
+                return (
+                    `
+                    <tr>
+                       <td>${data.id}</td>    
+                       <td>${data.name.firstname}</td>    
+                       <td>${data.email}</td>    
+                       <td>${data.address.city}</td>    
+                       <td>${data.phone}</td>    
+                    </tr>
+                    `
+
+                )
+            })
+            document.querySelector(".a").innerHTML += htmldata.join("")
+
+            document.querySelector(".b").innerHTML+=  sus.map((data,index)=>{
+                return (
+                    `
+                    <tr>
+                       <td>${data.id}</td>    
+                       <td>${data.username}</td>    
+                       <td>${data.password}</td>    
+                    
+                    </tr>
+                    `
+
+                )
+            }).join("")
+           
+
+        })
+    </script>
+</body>
+</html>

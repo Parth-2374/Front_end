@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        const user = async () => {
+            let res = await axios.get("https://691c669f3aaeed735c90b04d.mockapi.io/admin")
+            console.log(res.data);
+
+
+            res.data.forEach((data, index) => {
+                console.log(data)
+                document.writeln(`<h3>ID:-${data.id} Name:-${data.Name} Email:-${data.Email} 
+                    Phone:-${data.Phone} Username:-${data.UserName} Password:-${data.Password}
+                    City :-${data.City}</h3>`)
+            });
+
+        }
+        user()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch("data.json", {
+            method: "GET"
+        })
+            .then((res) => {
+                return res.json()
+            })
+            .then((res) => {
+                console.log(res)
+               for (let index = 0; index < res.admin.length; index++) {
+                let val = res.admin[index];
+                document.write(`<h4>id :-${val.id}  Name:- ${val.name} Email:- ${val.email} </h4>`)
+                
+               }
+            //    for (const data of res.users) {
+            //     console.log(data)
+            //     document.write(`<h4>id :-${data.id}  Name:- ${data.name} Course:- ${data.course} </h4>`)
+                
+            //    }
+               res.users.forEach((data,index) => {
+                document.write(`<h4>id :-${data.id}  Name:- ${data.name} Course:- ${data.course} </h4>`)
+               });
+               
+
+                // res.admin.users.forEach((data) => {
+                //     console.log(data)
+                //     document.write(`<h3>id : ${data.id} name : ${data.name} course : ${data.course}</h3>`)
+
+                // });
+            })
+    </script>
+</body>
+
+</html>

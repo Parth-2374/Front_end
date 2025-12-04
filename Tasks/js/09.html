@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>Phonenumber</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        fetch("https://fakestoreapi.com/users", {
+            method: "GET"
+        })
+            .then((res) => {
+                return res.json()
+            })
+            .then((sus) => {
+                console.log(sus);
+                sus.forEach((data, index) => {
+                    console.log(data)
+                });
+
+                // let html = sus.map((data,index)=>{
+                //     return(
+                //         `
+                //          <tr>
+                //             <td>${data.id}</td> 
+                //             <td>${data.name.firstname}</td> 
+                //             <td>${data.email}</td> 
+                //             <td>${data.phone}</td> 
+
+
+                //         </tr>
+
+                //         `
+                //     )
+                // })
+                //  document.querySelector("tbody").innerHTML +=html.join("")
+
+                document.querySelector("tbody").innerHTML += sus.map((data, index) => {
+                    return (
+                        `
+                        <tr>
+                            <td>${data.id}</td> 
+                            <td>${data.name.firstname}</td> 
+                             <td>${data.email}</td> 
+                             <td>${data.phone}</td> 
+                               
+                            
+                         </tr>
+                        
+                        
+                        `
+                    )
+                }).join("")
+
+
+            })
+    </script>
+
+</body>
+
+</html>

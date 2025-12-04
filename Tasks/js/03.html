@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("data.json",{
+            fetch :"GET"
+        })
+        .then((res)=>{
+            return res.json()
+        })
+        .then((sus)=>{
+            console.log(sus)
+            for(let i =0; i<sus.admin.length;i++){
+                let val =sus.admin[i]
+                console.log(val)
+                document.write(`<h2>ID:-${val.id} NAME:-${val.name}</h2>`)
+            }
+            for(let val of sus.users){
+                console.log(val)
+                document.write(`<h2>ID:-${val.id} NAME:-${val.name}</h2>`)
+            }
+            sus.admin.forEach((data,index) => {
+                console.log(data)
+                 document.write(`<h2>ID:-${data.id} NAME:-${data.name}</h2>`)
+
+
+            });
+
+        })
+        .catch((err)=>{
+           console.log("API NOT FIND");
+        })
+    </script>
+</body>
+</html>

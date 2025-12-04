@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hospital Appointment - Apply</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+        
+         <h1 >Hospital Appointment Form</h1>
+       
+      
+    </header>
+
+    <div id="messageArea"></div>
+
+    <div class="card">
+      <form id="appointmentForm" novalidate >
+          <div>
+              <label for="name">Applicant Name</label>
+              <input id="name" name="name" type="text"  required minlength="3" style="width: 99%;" />
+              <div class="errorText" id="err-name"></div>
+            </div><br>
+        
+            <div class="grid">
+
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required />
+          <div class="errorText" id="err-email"></div>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" required maxlength="10" />
+          <div class="errorText" id="err-phone"></div>
+        </div>
+
+        <div>
+          <label for="date">Date of Appointment</label>
+          <input id="date" name="date" type="date" required />
+          <div class="errorText" id="err-date"></div>
+        </div>
+
+        <div>
+          <label for="time">Time of Appointment</label>
+          <input id="time" name="time" type="time" required />
+          <div class="errorText" id="err-time"></div>
+        </div>
+
+        <div class="full">
+          <label for="comment">Medical Disease Comment</label>
+          <textarea id="comment" name="comment" required minlength="50" placeholder="Describe symptoms / history (min 50 characters)"></textarea>
+          <div class="errorText" id="err-comment"></div>
+        </div>
+
+        <div class="row-buttons">
+          <button type="button" class="btn btn-ghost" id="clearBtn">Clear</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Submit Appointment</button>
+          <a class="view-link" href="./view.html">View Appointments</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  
+
+  <script type="module">
+    import { appendItem } from "./storageUtils.js";
+
+    
+    class AppointmentHandler {
+      constructor(formEl, messageArea) {
+        this.form = formEl;
+        this.msgArea = messageArea;
+
+       
+        this.name = this.form.querySelector("#name");
+        this.email = this.form.querySelector("#email");
+        this.phone = this.form.querySelector("#phone");
+        this.date = this.form.querySelector("#date");
+        this.time = this.form.querySelector("#time");
+        this.comment = this.form.querySelector("#comment");
+
+       
+        this.err = {
+          name: document.getElementById("err-name"),
+          email: document.getElementById("err-email"),
+          phone: document.getElementById("err-phone"),
+          date: document.getElementById("err-date"),
+          time: document.getElementById("err-time"),
+          comment: document.getElementById("err-comment"),
+        };
+
+        this.addEventListeners();
+      }
+
+      addEventListeners() {
+       
+        this.form.addEventListener("input", (e) => {
+          const target = e.target;
+          this.validateField(target);
+        });
+
+       
+        this.form.addEventListener("blur", (e) => {
+          this.validateField(e.target);
+        }, true);
+
+       
+        this.form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          this.handleSubmit();
+        });
+
+       
+        document.getElementById("clearBtn").addEventListener("click", (e) => {
+          e.preventDefault();
+          this.clearForm();
+          this.showMessage("success", "Form cleared.");
+        });
+      }
+
+      validateField(field) {
+        if (!field || !field.name) return true;
+        const name = field.name;
+        const value = field.value.trim();
+        let ok = true;
+        let msg = "";
+
+        if (name === "name") {
+          if (value.length < 3) { ok = false; msg = "Name must be at least 3 characters."; }
+        }
+        if (name === "email") {
+          const re = /^[a-z0-9._+-]+@+[a-z.]+\.[a-z]{2,3}$/;
+          if (!re.test(value)) { ok = false; msg = "Enter a valid email address."; }
+        }
+        if (name === "phone") {
+          const re = /^[6-9][0-9]{9}$/
+          if (!re.test(value)) { ok = false; msg = "Phone must be exactly 10 digits."; }
+        }
+        if (name === "date" || name === "time") {
+      
+          const dateVal = this.date.value;
+          const timeVal = this.time.value;
+          if (!dateVal) {
+            ok = name === "date" ? false : ok;
+            msg = name === "date" ? "Date is required." : msg;
+          }if (!timeVal) {
+            ok = name === "time" ? false : ok;
+            msg = name === "time" ? "Time is required." : msg;
+          } else {
+            const chosen = new Date(dateVal + "T" + timeVal);
+            const now = new Date();
+            if (!(chosen instanceof Date) || isNaN(chosen)) {
+              ok = false; msg = "Invalid date/time.";
+            } else if (chosen <= now) {
+             
+              ok = false; msg = "Date and time must be in the future.";
+            }
+          }
+        }
+        if (name === "comment") {
+          if (value.length < 50) { ok = false; msg = "Comment must be at least 50 characters."; }
+        }
+
+       
+        if (!ok) {
+          field.classList.remove("valid");
+          field.classList.add("invalid");
+          this.err[name].textContent = msg;
+        } else {
+          field.classList.remove("invalid");
+          field.classList.add("valid");
+          this.err[name].textContent = "";
+        }
+
+        return ok;
+      }
+
+      validateForm() {
+        const fields = [this.name, this.email, this.phone, this.date, this.time, this.comment];
+        let allOk = true;
+        fields.forEach((f) => {
+          const ok = this.validateField(f);
+          if (!ok) allOk = false;
+        });
+        return allOk;
+      }
+
+      clearForm() {
+        this.form.reset();
+      
+        Object.values(this.err).forEach((el) => (el.textContent = ""));
+        [this.name, this.email, this.phone, this.date, this.time, this.comment].forEach((f) => {
+          f.classList.remove("valid", "invalid");
+        });
+      }
+
+      showMessage(type, message) {
+       
+        this.msgArea.innerHTML = "";
+        const div = document.createElement("div");
+        div.className = `alert ${type === "success" ? "success" : "error"}`;
+        div.setAttribute("role","status");
+        div.textContent = message;
+        this.msgArea.appendChild(div);
+
+        setTimeout(()=> {
+          if (this.msgArea.contains(div)) this.msgArea.removeChild(div);
+        }, 4000);
+      }
+
+      handleSubmit() {
+        if (!this.validateForm()) {
+          this.showMessage("error", "Please fix validation errors before submitting.");
+          return;
+        }
+
+      
+        const record = {
+          id: Date.now().toString(),
+          name: this.name.value.trim(),
+          email: this.email.value.trim(),
+          phone: this.phone.value.trim(),
+          date: this.date.value,
+          time: this.time.value,
+          comment: this.comment.value.trim(),
+          createdAt: new Date().toISOString()
+        };
+
+        
+        try {
+          appendItem(record);
+          this.showMessage("success", "Appointment saved successfully.");
+          this.clearForm();
+        } catch (e) {
+          console.error(e);
+          this.showMessage("error", "Could not save appointment.");
+        }
+      }
+    }
+
+   
+    const formEl = document.getElementById("appointmentForm");
+    const messageArea = document.getElementById("messageArea");
+    new AppointmentHandler(formEl, messageArea);
+  </script>
+</body>
+</html>

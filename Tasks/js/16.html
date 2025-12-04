@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        const user = async () => {
+            let res = await axios.get("https://fakestoreapi.com/users")
+            console.log(res.data);
+
+            res.data.forEach((data, index) => {
+                console.log(data)
+
+                let tbody = document.querySelector("tbody")
+
+                let trow =tbody.insertRow()
+                let idcell = trow.insertCell(0)
+                let usernamecell = trow.insertCell(1)
+                let passwordcell = trow.insertCell(2)
+
+
+                idcell.textContent= data.id
+                usernamecell.textContent= data.username
+                passwordcell.textContent= data.password
+
+                
+            });
+
+        }
+        user()
+    </script>
+</body>
+</html>
