@@ -1,0 +1,12 @@
+{
+  "registrations": [
+    {
+      "id": "4bc5",
+      "name": "user",
+      "email": "user@gmail.com",
+      "phone": "1234567890",
+      "session": "Job",
+      "type": "Online"
+    }
+  ]
+}
