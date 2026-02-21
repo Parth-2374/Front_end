@@ -1,0 +1,17 @@
+<p>event works!</p>
+
+<button class="btn" name="btn-name" (click)="clickme($event)">
+    click me
+</button>
+<br><br>
+<hr>
+<div (mouseenter)="mouseEvent($event)"
+    style="width: 50px; height: 50px; background-color: green; border: 2px solid black;">
+</div>
+<hr>
+<div (mouseleave)="mouseEvent($event)"
+    style="width: 50px; height: 50px; background-color: red; border: 2px solid black;">
+</div>
+<hr>
+<input type="text" name="user" (input)="input($event)">
+<input type="text" name="user" (focus)="focus($event)" (blur)="focus($event)">

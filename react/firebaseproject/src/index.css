@@ -1,0 +1,41 @@
+ .form-control::placeholder {
+    color: white !important;
+    opacity: 1;
+  }
+  .form-control:focus {
+    border-color: white !important;
+    box-shadow: 0 0 0 0.25rem rgba(247, 244, 244, 0.5) !important;
+  }
+  .form-control {
+    background-color: transparent !important;
+    border: 0px solid white !important;
+  }
+  .custom-checkbox {
+    accent-color: white !important;
+    background-color: white;
+    border: 1px solid white !important;
+  }
+  
+  .btn.hover-info:hover {
+    background-color: white !important;
+    color: blue !important; /* info */
+  }
+  
+  .btn.hover-primary:hover {
+    background-color: white !important;
+    color:   green!important; /* primary */
+  }
+  
+  .btn.hover-success:hover {
+    background-color: white !important;
+    color: red !important; /* success */
+  }
+  
+  /* optional smooth effect */
+  .btn.hover-info,
+  .btn.hover-primary,
+  .btn.hover-success {
+    transition: color 0.3s ease;
+  }
+  
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Slider with Navbar Overlay</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar को slider के ऊपर रखने के लिए */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    /* Slider height full screen */
+    .carousel-item {
+      height: 100vh;
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+    /* Dark overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 5;
+    }
+    /* Hero text */
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-3 fw-bold" href="#">MyLogo</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-3 fs-5">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Appointment</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image:url('https://images.unsplash.com/photo-1522199710521-72d69614c702');"></div>
+
+      <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');"></div>
+
+      <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1508923567004-3a6b8004f3d1');"></div>
+    </div>
+  </div>
+
+  <!-- HERO TEXT -->
+  <div class="hero-text">
+    <h1 class="display-3 fw-bold">We Build Modern Experiences</h1>
+    <p class="fs-4">Creative digital solutions for modern brands.</p>
+    <button class="btn btn-light btn-lg me-2">Get Started</button>
+    <button class="btn btn-outline-light btn-lg">Learn More</button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

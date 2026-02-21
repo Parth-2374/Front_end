@@ -1,0 +1,347 @@
+{
+  "Admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "admin2",
+      "email": "admin2@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1767973007727",
+      "name": "admin3",
+      "email": "admin3@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1767974153207",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "12"
+    }
+  ],
+  "User": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": ""
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1767770125884",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1767972474585",
+      "name": "user4",
+      "email": "user4@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1767972762945",
+      "name": "admin3",
+      "email": "admin3@gmail.com",
+      "password": "123"
+    }
+  ],
+  "Destination": [
+    {
+      "id": "1",
+      "name": "Maldives",
+      "type": "Brown Wooden Bridge",
+      "tag": "Wooden Bridge",
+      "available": "10",
+      "price": "2000",
+      "img": "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?_gl=1*1abrlw0*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcwODcyMTMkbzIxJGcxJHQxNzY3MDg4MDE3JGo0OSRsMCRoMA.."
+    },
+    {
+      "id": "2",
+      "name": "China",
+      "type": "White Concrete Houses",
+      "tag": "Houses ",
+      "available": "15",
+      "price": "3000",
+      "img": "https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?_gl=1*1b5mfj1*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcwODcyMTMkbzIxJGcxJHQxNzY3MDg4MTQ1JGo0MiRsMCRoMA.."
+    },
+    {
+      "id": "3",
+      "name": "Giza, Egypt",
+      "type": "Great Sphinx Of Giza Under Blue Starry Sky",
+      "tag": "Egypt Alive 365 ",
+      "available": "6",
+      "price": "4600",
+      "img": "https://images.pexels.com/photos/262780/pexels-photo-262780.jpeg?_gl=1*1bbtgrh*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcwODcyMTMkbzIxJGcxJHQxNzY3MDg4MjczJGoxMyRsMCRoMA.."
+    },
+    {
+      "id": "1766929775766",
+      "name": "Rome",
+      "type": "The Colosseum, Rome",
+      "tag": "Roman Empire",
+      "available": "10",
+      "price": "3400",
+      "img": "https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?_gl=1*1upbli*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjY5Mjk0MDUkbzE5JGcxJHQxNzY2OTI5NjY4JGo1OSRsMCRoMA.."
+    },
+    {
+      "id": "1767088874708",
+      "name": "Singapore",
+      "type": "Stunning Night View of Marina Bay Sands, Singapore",
+      "tag": "Passion Made Possible",
+      "available": "25",
+      "price": "5000",
+      "img": "https://images.pexels.com/photos/31398654/pexels-photo-31398654.jpeg?_gl=1*rw2rha*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcwODcyMTMkbzIxJGcxJHQxNzY3MDg4NzYxJGo1NiRsMCRoMA.."
+    }
+  ],
+  "FeaturedTours": [
+    {
+      "id": "1",
+      "name": "Bali Adventure Escape ",
+      "type": "Discover the mystical beauty of Bali with temple visits, volcano hiking, and pristine beaches.",
+      "tag": "Luxury",
+      "days": "15",
+      "price": "5000",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Saint Petersburg, Russia",
+      "type": "Peterhof Palace in Saint Petersburg",
+      "tag": "Place",
+      "days": "7",
+      "price": "4000",
+      "img": "https://images.pexels.com/photos/15501396/pexels-photo-15501396.jpeg?_gl=1*126ij0u*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNzEzNTkkbzI0JGcxJHQxNzY3MTcxNjE4JGozMCRsMCRoMA.."
+    }
+  ],
+  "LastMinuteDeals": [
+    {
+      "id": "1",
+      "name": "Istanbul, Turkey",
+      "type": "Maiden's Tower at Sunset in Istanbul",
+      "days": "Limited time offer!",
+      "pr": "30",
+      "img": "https://images.pexels.com/photos/35417663/pexels-photo-35417663.jpeg?_gl=1*1h0zd5a*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNTk2OTMkbzIzJGcxJHQxNzY3MTU5Njk5JGo1NCRsMCRoMA.."
+    },
+    {
+      "id": "2",
+      "name": "African Safari",
+      "type": "Witness the great migration and encounter magnificent wildlife in their natural habitat.",
+      "days": "Limited time offer!",
+      "pr": "29",
+      "img": "https://images.pexels.com/photos/28924821/pexels-photo-28924821.jpeg?_gl=1*1ehezjf*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNTk2OTMkbzIzJGcxJHQxNzY3MTYwMTAyJGo1OSRsMCRoMA.."
+    },
+    {
+      "id": "1767173742488",
+      "name": "Geiranger, Norway",
+      "type": "Woman Standing on the Cliff",
+      "days": "Limited time offer!",
+      "pr": "10",
+      "img": "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?_gl=1*1mw0jnt*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNzEzNTkkbzI0JGcxJHQxNzY3MTczMzA4JGo1MCRsMCRoMA.."
+    }
+  ],
+  "Alltours": [
+    {
+      "id": "1",
+      "name": "Swiss Alps Adventure",
+      "price": "200",
+      "type": "Experience breathtaking mountain views and charming alpine villages in the heart of Switzerland.",
+      "days": "3",
+      "rating": "4.8",
+      "reviews": "100",
+      "img": "https://images.pexels.com/photos/35442069/pexels-photo-35442069.jpeg?_gl=1*15vhmd4*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNTk2OTMkbzIzJGcxJHQxNzY3MTYwNDM3JGozJGwwJGgw"
+    },
+    {
+      "id": "2",
+      "name": "Iceland Northern Lights",
+      "price": "570",
+      "type": "Chase the aurora borealis and explore ice caves, geysers, and dramatic waterfalls.",
+      "days": "6",
+      "rating": "4.7",
+      "reviews": "95",
+      "img": "https://images.pexels.com/photos/15202621/pexels-photo-15202621.jpeg?_gl=1*1btb1dm*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNTk2OTMkbzIzJGcxJHQxNzY3MTYwODM4JGoxMyRsMCRoMA.."
+    },
+    {
+      "id": "3",
+      "name": "Magical Morocco Tour",
+      "price": "490",
+      "type": "Discover ancient medinas, sahara desert, and vibrant markets in this exotic destination.",
+      "days": "7",
+      "rating": "4.0",
+      "reviews": "150",
+      "img": "http://images.pexels.com/photos/53537/caravan-desert-safari-dune-53537.jpeg?_gl=1*1gqxcfu*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcxNTk2OTMkbzIzJGcxJHQxNzY3MTYwODg5JGozMCRsMCRoMA.."
+    }
+  ],
+  "Gallery": [
+    {
+      "id": "1",
+      "name": "Natural Beauty  ",
+      "type": "Green Leafed Trees on Green Grass Field",
+      "img": "https://i.ibb.co/0pYPwzsB/gallery-1.webp"
+    },
+    {
+      "id": "2",
+      "name": "Urban Landscape",
+      "type": "The physical look of a city area.",
+      "img": "https://i.ibb.co/HLHQTyTf/gallery-2.webp"
+    },
+    {
+      "id": "3",
+      "name": "Candid Moments",
+      "type": "Natural, unplanned moments",
+      "img": "https://i.ibb.co/Xf4GPFvV/gallery-3.webp"
+    },
+    {
+      "id": "4",
+      "name": "Wilderness",
+      "type": "Natural, wild area",
+      "img": "https://i.ibb.co/gLWtjMWq/gallery-4.webp"
+    },
+    {
+      "id": "5",
+      "name": "Modern Design",
+      "type": "Clean, stylish design using new ideas, minimal look, and modern trends.",
+      "img": "https://i.ibb.co/dncYnyQ/gallery-5.webp"
+    },
+    {
+      "id": "6",
+      "name": "Portrait Studies",
+      "type": "Close-up photos or artworks focusing on people’s faces, expressions, and emotions.",
+      "img": "https://i.ibb.co/3Y8ts0nX/gallery-6.webp"
+    },
+    {
+      "id": "7",
+      "name": "Serene Waters",
+      "type": "Calm and peaceful water scenes like lakes, rivers, or sea.",
+      "img": "https://i.ibb.co/LztGH7Gs/gallery-7.webp"
+    },
+    {
+      "id": "8",
+      "name": "Historical Places",
+      "type": "Old, important locations linked to history, culture, or heritage.",
+      "img": "https://i.ibb.co/tMFW5tJT/gallery-8.webp"
+    }
+  ],
+  "visitattractions": [
+    {
+      "id": "1",
+      "name": "Santorini, Greece ",
+      "type": "White Concrete Building Beside Body of Water",
+      "img": "https://images.pexels.com/photos/1010649/pexels-photo-1010649.jpeg?_gl=1*9f6zn1*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjcyNTU1MjQkbzI5JGcxJHQxNzY3MjU2MDQ2JGo1OSRsMCRoMA.."
+    }
+  ],
+  "availabletour": [
+    {
+      "id": "1767528877117",
+      "name": "Maldives",
+      "type": "ihwdwqknwdiw",
+      "price": "kcvvnkncvvuchvdfivdfafdvcnvbjzvdfvxfhvdfv",
+      "hours": "qkqwkjdqwe",
+      "rating": "qq",
+      "img": "https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?_gl=1*1upbli*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjY5Mjk0MDUkbzE5JGcxJHQxNzY2OTI5NjY4JGo1OSRsMCRoMA.."
+    }
+  ],
+  "FeaturedDestinations1": [
+    {
+      "id": "1",
+      "name": "Tropical Paradise",
+      "location": "Maldives",
+      "type": "Pristine beaches, crystal-clear waters, and luxury overwater villas await in this tropical paradise destination.",
+      "Packages": "20",
+      "rating": "4.0",
+      "chekrating": "10",
+      "price": "2000",
+      "tag": "Popular Choice",
+      "img": "https://i.ibb.co/G415X8NS/destination-3.webp"
+    }
+  ],
+  "FeaturedDestinations2": [
+    {
+      "id": "1",
+      "name": "Mountain Adventure",
+      "location": "Nepal",
+      "type": "Breathtaking Himalayan peaks and ancient Buddhist temples",
+      "tours": "16",
+      "rating": "4.8",
+      "price": "1500",
+      "img": "https://i.ibb.co/xtPGXgSX/destination-7.webp"
+    },
+    {
+      "id": "1767808492940",
+      "name": "Cultural Heritage",
+      "type": "Discover ancient civilizations, colorful markets, and",
+      "location": "Peru",
+      "tours": "9",
+      "rating": "4.7",
+      "price": "980",
+      "img": "https://i.ibb.co/20RmXjc0/destination-11.webp"
+    },
+    {
+      "id": "1767808688810",
+      "name": "Safari Experience",
+      "type": "Witness the Big Five and experience the great migration ",
+      "location": "Kenya",
+      "tours": "10",
+      "rating": "4.8",
+      "price": "2750",
+      "img": "https://i.ibb.co/xqytZs80/destination-16.webp"
+    }
+  ],
+  "FeaturedToursHome": [
+    {
+      "id": "1",
+      "name": "Serene Beach Retreat ",
+      "type": "Mauris ipsum neque, cursus ac ipsum at, iaculis facilisis ligula. Suspendisse non sapien vel enim cursus semper.",
+      "days": "3",
+      "maxperson": "4",
+      "tag": "Top Rated",
+      "price": "2000",
+      "rating": "4.8",
+      "chekrating": "120",
+      "tourhighlights1": "Maldives",
+      "tourhighlights2": "Seychelles",
+      "tourhighlights3": "Bora Bora",
+      "img": "https://i.ibb.co/4ZyHBRq4/tour-1.webp"
+    },
+    {
+      "id": "1767809174502",
+      "name": "Arctic Wilderness Expedition",
+      "type": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum non massa nec fermentum.",
+      "days": "10 ",
+      "maxperson": "8",
+      "tag": "Only 3 Spots!",
+      "price": "5500",
+      "rating": "4.6",
+      "chekrating": "60",
+      "tourhighlights1": "Greenland",
+      "tourhighlights2": "Iceland",
+      "tourhighlights3": "Norway",
+      "img": "https://i.ibb.co/hJGCbWPB/tour-2.webp"
+    },
+    {
+      "id": "1767809502168",
+      "name": "Sahara Desert Discovery",
+      "type": "Pellentesque euismod tincidunt turpis ac tristique. Phasellus vitae lacus in enim mollis facilisis vel quis ex. In hac habitasse platea dictumst.",
+      "days": "5",
+      "maxperson": "4",
+      "tag": "Newly Added",
+      "price": "1900",
+      "rating": "4.5",
+      "chekrating": "10",
+      "tourhighlights1": "Morocco",
+      "tourhighlights2": "Egypt",
+      "tourhighlights3": "Dubai",
+      "img": "https://i.ibb.co/TBTmX3Nq/tour-4.webp"
+    }
+  ]
+}

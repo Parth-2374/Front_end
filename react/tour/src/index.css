@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.gallery-slider .swiper {
+  padding: 40px 0;
+}
+
+.gallery-slider .swiper-slide {
+  width: 350px;   /* image size control */
+  height: auto;
+  transition: 0.4s;
+}
+
+.gallery-slider .swiper-slide img {
+  border-radius: 12px;
+}
+
+.gallery-slider .swiper-slide-prev,
+.gallery-slider .swiper-slide-next {
+  opacity: 0.4;
+}
+

@@ -1,0 +1,35 @@
+<!-- <button (click)="getproductdata()">Get Data</button>
+
+@for(data of product;track data){
+  <p>{{data.name}}</p>
+  <p>{{data.age}}</p>
+} -->
+  <h1>Api Call</h1>
+  
+  <!-- @for(item of list;track item.id){
+    <ul>
+      <li>{{item.title}}</li>
+      <li>{{item.description}}</li>
+      <li>{{item.category}}</li>
+      <li>{{item.price}}</li>
+      <li><img src="{{item.thumbnail}}" alt=""></li>
+    </ul>
+  } -->
+    <!-- @for(data of user1;track data.id){
+      <ul>
+        <li>{{data.name}}</li>
+      </ul>
+    } -->
+    <!-- @for (pro of product; track pro.id) {
+      <ul>
+        <li>{{pro.name }}</li>
+      </ul>
+    } -->
+    <form #productForm="ngForm" (ngSubmit)="addProduct(productForm.value)">
+
+      <input type="text" placeholder="Enter Your product-Name" name="name" ngModel> <br><br>
+      <input type="url" placeholder="Enter Your Img Link" name="img" ngModel> <br><br>
+
+      <button>Submit</button>
+    </form>
+    <hr>

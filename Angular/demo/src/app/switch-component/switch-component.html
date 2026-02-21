@@ -1,0 +1,50 @@
+<p>switch-component works!</p>
+
+<button (click)="handleColor('red')">red</button>
+<button (click)="handleColor('green')">green</button>
+<button (click)="handleColor('blue')">blue</button>
+<button (click)="handleColor('gold')">Gold</button>
+@switch(color){
+    @case('red'){
+        <h1>red</h1>
+    }
+    @case('green'){
+        <h1>green</h1>
+    }
+        @case('blue'){
+        <h1>blue</h1>
+    }
+    @default{
+        <h1>No color</h1>
+    }
+}
+
+<hr>
+<hr>
+<input type="text" (input)="handleMonth($event)" placeholder="Enter Your month" name="" id="">
+@switch(month){
+    @case(1){
+        <p>Jan</p>
+    }
+    @case(2){
+        <p>Feb</p>
+    }
+    @case(3){
+        <p>March</p>
+    }
+    @case(4){
+        <p>April</p>
+    }
+    @case(5){
+        <p>May</p>
+    }
+    @case(6){
+        <p>June</p>
+    }
+    @case(7){
+        <p>July</p>
+    }
+    @default{
+        <p>No Match</p>
+    }
+}

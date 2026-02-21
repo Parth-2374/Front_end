@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hero Slider with Overlay Navbar</title>
+  <style>
+    :root{
+      --nav-height: 72px;
+      --overlay: rgba(0,0,0,0.42);
+      --accent: #2563eb;
+      --white: #fff;
+      --transition: 400ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body,#root{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #0f172a;
+      background:#f6f8fb;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      position: fixed;
+      left:0; right:0; top:0;
+      height: var(--nav-height);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 32px;
+      z-index: 50;
+      transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+      background: transparent;
+      color: var(--white);
+      pointer-events:auto;
+    }
+    .navbar.solid{
+      background: rgba(255,255,255,0.98);
+      color: #0f172a;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.08);
+    }
+    .logo{font-weight:700; font-size:20px; letter-spacing:0.2px;}
+    .nav-links{display:flex; gap:20px; align-items:center; font-weight:600; font-size:15px;}
+    .nav-links a{color:inherit; text-decoration:none; opacity:.95; position:relative; padding:6px 0}
+    .nav-links a::after{content:""; position:absolute; left:0; right:0; height:2px; background:var(--white); bottom:-8px; transform:scaleX(0); transform-origin:left; transition:transform 220ms}
+    .navbar.solid .nav-links a::after{background:var(--accent)}
+    .nav-links a:hover::after{transform:scaleX(1)}
+    .nav-ghost{display:flex;gap:16px; align-items:center}
+
+    /* HERO / SLIDER */
+    .hero{
+      position:relative;
+      height:100vh;
+      min-height:560px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:var(--white);
+    }
+
+    .slides{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:1;
+    }
+
+    .slide{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transition: opacity 900ms cubic-bezier(.2,.9,.2,1);
+      will-change:opacity;
+    }
+    .slide.active{opacity:1}
+
+    /* dark overlay on slides */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: var(--overlay);
+      z-index:2;
+      pointer-events:none;
+    }
+
+    /* Hero content */
+    .hero-inner{
+      position:relative;
+      z-index:10;
+      max-width:1100px;
+      padding: 40px 24px;
+    }
+    .hero h1{
+      font-family: "Poppins", Inter, sans-serif;
+      font-weight:800;
+      font-size: clamp(28px, 5vw, 64px);
+      line-height:1.02;
+      margin-bottom:14px;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .hero p{
+      font-size: clamp(14px, 1.2vw, 20px);
+      color: rgba(255,255,255,0.95);
+      margin-bottom:22px;
+      max-width:760px;
+      margin-left:auto;margin-right:auto;
+    }
+
+    .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      padding: 12px 22px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
+      border:0;
+      transition: transform 160ms, box-shadow 160ms;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg,#6EE7F9 0%, #7C3AED 100%);
+      color: #071124;
+      box-shadow: 0 8px 24px rgba(124,58,237,0.18);
+    }
+    .btn.ghost{
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.18);
+    }
+    .btn:hover{transform:translateY(-4px)}
+    .btn:active{transform:translateY(-1px)}
+
+    /* dots */
+    .dots{
+      position: absolute;
+      bottom: 26px;
+      left:50%;
+      transform: translateX(-50%);
+      display:flex; gap:8px;
+      z-index:12;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:9999px;
+      background: rgba(255,255,255,0.45);
+      cursor:pointer;
+      transition: transform 160ms, background 160ms;
+    }
+    .dot.active{ background: #fff; transform:scale(1.25) }
+
+    /* page content below hero (demo placeholder) */
+    main .section{
+      padding:72px 20px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .demo-card{
+      background:#fff;
+      border-radius:12px;
+      padding:22px;
+      box-shadow: 0 6px 22px rgba(16,24,40,0.05);
+      margin-bottom:18px;
+    }
+
+    /* responsiveness */
+    @media (max-width:760px){
+      .nav-links{display:none}
+      .hero{min-height:520px}
+      .logo{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="logo" id="logo">NeoFlow</div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">Our Team</a>
+      <a href="#appointment">Appointment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-ghost" aria-hidden="true">
+      <!-- placeholder for icons or actions -->
+    </div>
+  </header>
+
+  <!-- HERO / SLIDER -->
+  <section class="hero" id="hero">
+    <div class="slides" id="slides">
+      <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1522199710521-72d69614c702?w=1600&q=80&auto=format&fit=crop');"></div>
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80&auto=format&fit=crop');"></div>
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1508923567004-3a6b8004f3d1?w=1600&q=80&auto=format&fit=crop');"></div>
+    </div>
+
+    <div class="hero-inner" role="banner" aria-live="polite">
+      <h1>We Build Modern Experiences</h1>
+      <p>Creative digital solutions for modern brands. Beautiful design, thoughtful engineering, and delightful UX.</p>
+
+      <div class="hero-ctas" role="group" aria-label="Hero actions">
+        <button class="btn primary" id="ctaPrimary">Get Started</button>
+        <button class="btn ghost" id="ctaSecondary">Learn More</button>
+      </div>
+    </div>
+
+    <div class="dots" id="dots" aria-hidden="false">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+    </div>
+  </section>
+
+  <!-- Demo content below hero for scroll behavior -->
+  <main>
+    <section class="section" id="about">
+      <div class="demo-card">
+        <h2>About Preview</h2>
+        <p>This is a demo about section. Scroll down to see the navbar become solid and the overlay remain behind the content.</p>
+      </div>
+
+      <div class="demo-card" id="services">
+        <h3>Features / Services</h3>
+        <p>Feature cards, hover interactions and more will appear here in the full site.</p>
+      </div>
+
+      <div class="demo-card" id="team">
+        <h3>Team</h3>
+        <p>Team preview cards would be shown here.</p>
+      </div>
+
+      <div class="demo-card" id="appointment">
+        <h3>Appointment</h3>
+        <p>Booking form or scheduling UI would go here.</p>
+      </div>
+
+      <div class="demo-card" id="contact">
+        <h3>Contact</h3>
+        <p>Contact form and map preview.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      let timer = null;
+      const interval = 3000;
+      const heroEl = document.getElementById('hero');
+      const navbar = document.getElementById('navbar');
+
+      function goTo(index){
+        slides.forEach((s,i)=> s.classList.toggle('active', i===index));
+        dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+        current = index;
+      }
+
+      function next(){
+        goTo((current+1) % slides.length);
+      }
+
+      function start(){
+        stop();
+        timer = setInterval(next, interval);
+      }
+      function stop(){
+        if(timer){ clearInterval(timer); timer = null; }
+      }
+
+      // init
+      start();
+
+      // pause on hover
+      heroEl.addEventListener('mouseenter', stop);
+      heroEl.addEventListener('mouseleave', start);
+
+      // dot clicks
+      dots.forEach(d => {
+        d.addEventListener('click', (e) => {
+          const i = Number(d.dataset.index);
+          goTo(i);
+        });
+      });
+
+      // navbar solid on scroll
+      function onScroll(){
+        const y = window.scrollY || window.pageYOffset;
+        if(y > 70){
+          navbar.classList.add('solid');
+        } else {
+          navbar.classList.remove('solid');
+        }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      // accessibility: keyboard left/right
+      window.addEventListener('keydown', (e) => {
+        if(e.key === "ArrowLeft"){ goTo((current-1+slides.length)%slides.length); stop(); }
+        if(e.key === "ArrowRight"){ goTo((current+1)%slides.length); stop(); }
+      });
+
+      // optional: CTA handlers (demo)
+      document.getElementById('ctaPrimary').addEventListener('click', ()=> {
+        window.location.href = "#services";
+      });
+      document.getElementById('ctaSecondary').addEventListener('click', ()=> {
+        window.location.href = "#about";
+      });
+    })();
+  </script>
+</body>
+</html>

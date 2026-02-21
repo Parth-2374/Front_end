@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            name: "parth",
+            rollNo: 2,
+            city: "ahmedabad",
+            subject: {
+                english: 90,
+                sci: 80,
+                match: 70,
+                hindi: 100,
+            }
+
+        }
+
+        let sum = 0;
+        for (marks in student.subject) {
+            sum = sum + student.subject[marks]
+        }
+        
+        let pr =0;
+        for (marks in student.subject) {
+           pr++
+        }
+        let average =sum/pr
+        // console.log(average);
+        
+
+    </script>
+</body>
+
+</html>

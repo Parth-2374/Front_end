@@ -1,0 +1,33 @@
+.navbar-nav {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .navbar-nav li {
+    list-style: none;
+  }
+/* Hover dropdown */
+.navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  
+  /* Remove click arrow animation issue */
+  .dropdown-toggle::after {
+    display: none;
+  }
+    
+  .navbar .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    float: none !important;
+  }
+  .nav-link-hover {
+    color: #777;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link-hover:hover {
+    color: #000;
+  }
+  

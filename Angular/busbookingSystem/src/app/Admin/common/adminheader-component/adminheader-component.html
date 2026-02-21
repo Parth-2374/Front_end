@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-lg navbar-light  rounded mb-2" style="background-color: #d84e55;">
+    <a class="navbar-brand ms-5 name" href="#" routerLink="/admin">
+        <i class="fa-solid fa-bus"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link ms-2 name" href="#" routerLink="/admin">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link name" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link name" routerLink="/seat" href="#">Add seats</a>
+          </li>
+       
+      </ul>
+      
+      
+    </div>
+    <li class="nav-item  mt-2" style="list-style: none;">
+        <a class="nav-link "  href="#"  >Hello :-{{  adminuser  }}</a>
+    </li>
+      <li class="nav-item"  style="list-style: none;" >
+        <a class="nav-link name ms-5 me-5 "href="#" (click)="adminLogout()">Log-out</a>
+      </li>
+      
+      
+  </nav>
+
+ 

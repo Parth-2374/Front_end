@@ -1,0 +1,24 @@
+@media only screen and(max-width:1160px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {
+  
+}
+
+@media only screen and (max-width:576px) {
+    .search {
+        transform: translateX(-35px);
+        width: 50%;
+        /* border: 2px solid black; */
+    }
+    .search input{
+        width: 250px;
+    }
+    .search button {
+        padding: 20px;
+    }
+    .dropdown-menu {
+        visibility: visible;
+    }
+}

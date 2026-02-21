@@ -1,0 +1,41 @@
+<p>condition-component works!</p>
+
+<!-- <div style="border: 2px soild black;width: 50px; height: 50px; background-color: blue;"></div> -->
+<!-- <button (click)="show()">show Box</button> -->
+<!-- <button (click)="hide()">Hide Box</button> -->
+<!-- <button (click)="toggle()">Toogle Box</button> -->
+<!-- @if(display){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: blue;"></div>
+}
+<br><br>
+<hr>
+<button (click)="togglediv()">{{toggle1?'show glod div':'show green div'}}</button>
+@if(toggle1){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: gold;"></div>
+}
+@else(){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: green;"></div>
+   
+} -->
+<hr><hr><hr>
+<button (click)="handleColor(1)" >red</button>
+<button (click)="handleColor(2)">blue</button>
+<button (click)="handleColor(3)">green</button>
+<button (click)="handleColor(10)">Other</button>
+<input type="text" (input)="handleInput($event)">
+
+@if(color==1){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: red;"></div>
+}
+@else if(color==2){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: blue;"></div>
+
+}
+@else if(color==3){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: green;"></div>
+
+}
+@else (){
+    <div style="border: 2px soild black;width: 100px; height: 100px; background-color: black;"></div>
+
+}

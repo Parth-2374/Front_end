@@ -1,0 +1,11 @@
+<p>forloop-component works!</p>
+<!-- <h2>{{user[0]}}</h2> -->
+ @for(s of student ;track s.name;let id =$index){
+        <p> 
+            <span>{{id+1}}</span> &nbsp;
+            <span>{{s.name}}</span> &nbsp;
+            <span>{{s.age}}</span> &nbsp;
+            <span>{{s.course}}</span> &nbsp;
+            <button (click)="getname(s.email)">Get Email</button>
+        </p> 
+ }

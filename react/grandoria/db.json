@@ -1,0 +1,56 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "admin1",
+      "email": "admin1@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "1",
+      "name": "Deluxe Ocean Suite",
+      "guest": "4",
+      "price": "500",
+      "type": "Ocean View",
+      "img": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?_gl=1*1f82276*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjY1NzQ1NDAkbzEzJGcxJHQxNzY2NTc0NTQ0JGo1NiRsMCRoMA.."
+    },
+    {
+      "id": "2",
+      "name": "Executive Business Suite",
+      "guest": "6",
+      "price": "100",
+      "type": "Business",
+      "img": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?_gl=1*1l3ccbm*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjY1NzQ1NDAkbzEzJGcxJHQxNzY2NTc0NTQ0JGo1NiRsMCRoMA.."
+    },
+    {
+      "id": "3",
+      "name": "Romantic Honeymoon Suite",
+      "guest": "4",
+      "price": "5000",
+      "type": "Romantic",
+      "img": "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?_gl=1*4opl7h*_ga*MjA4NDM5MDM3NC4xNzUzMjA5MzI3*_ga_8JE65Q40S6*czE3NjY1ODMxNzUkbzE0JGcxJHQxNzY2NTgzMTc5JGo1NiRsMCRoMA.."
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "12345678"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+ <p>grade-component works!</p>
+
+<input type="text" (input)="handleMarks($event)" placeholder="Enter Your Marks" name="" id="">
+@if(marks <0 || marks>100){
+<p>Invaild Marks</p>    
+}@else if(marks<=100 && marks>=85){
+    <p>Garde A</p>
+}@else if(marks<=84 && marks>=75){
+    <p>Garde B</p>
+}@else if(marks<=74 && marks>=65){
+    <p>Garde C</p>
+}@else if(marks<=64 && marks>=55){
+    <p>Garde D</p>
+}@else if(marks<=54 && marks>=45){
+    <p>Garde E</p>
+}@else if(marks<=44 && marks>=35){
+    <p>Garde F</p>
+}@else{
+    <p>Fail</p>
+}

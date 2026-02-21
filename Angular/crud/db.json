@@ -1,0 +1,85 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "shubham jadav",
+      "email": "jadavshubham5@gmail.com",
+      "password": "1234",
+      "mobiel": "12345678901"
+    },
+    {
+      "id": "2",
+      "name": "sumit jadav",
+      "email": "jadavsumit5@gmail.com",
+      "password": "1234",
+      "mobiel": "12345678901"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "Santoor Soap",
+      "img": "https://m.media-amazon.com/images/I/71s3hmuy3FL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": "2",
+      "name": "dettol Soap",
+      "img": "https://www.quickpantry.in/cdn/shop/products/dettol-intense-cool-soap-quick-pantry-1.jpg?v=1710538711"
+    },
+    {
+      "id": "7df6",
+      "name": "user",
+      "img": "https://i.ibb.co/G415X8NS/destination-3.webp"
+    },
+    {
+      "id": "dc34",
+      "name": "gcmkjk",
+      "img": "https://i.ibb.co/G415X8NS/destination-3.webp"
+    },
+    {
+      "id": "6156",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "8031",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "ecee",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "6143",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "6a3a",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "46cb",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "115a",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "a22a",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    },
+    {
+      "id": "5f6f",
+      "name": "Maldives",
+      "img": "https://www.zuuzuuholidays.com/wp-content/uploads/2022/12/Ubud-Village-Tour.jpg"
+    }
+  ]
+}

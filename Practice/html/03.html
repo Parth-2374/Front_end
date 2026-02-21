@@ -1,0 +1,204 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WhatsApp Fixed Button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      height: 2000px; 
+      font-family: Arial, sans-serif;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    
+    .demo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+    }
+
+    .demo button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WhatsApp Fixed Button Demo</h1>
+  <p>Scroll karke dekho — button hamesha bottom me fixed rahega.</p>
+
+ 
+  <div class="demo">
+    <button onclick="login()">Login</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+  <div class="whatsapp-float" onclick="openWhatsApp()">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <script>
+    function login() {
+      localStorage.setItem("auth", "true");
+      alert("Login successful!");
+    }
+
+    function logout() {
+      localStorage.removeItem("auth");
+      alert("Logged out!");
+    }
+
+    function openWhatsApp() {
+      const isAuth = localStorage.getItem("auth");
+
+      if (!isAuth) {
+        alert("Please login first!");
+        return;
+      }
+
+      const adminNumber = "919876543210"; 
+      
+      const message = "Hello Admin, I need support";
+
+      const url =
+        "https://wa.me/" +
+        adminNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WhatsApp Fixed Button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome Icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      min-height: 2000px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* WhatsApp Fixed Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37,211,102,0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Website</h1>
+  <p>Scroll karo — WhatsApp icon hamesha bottom me fixed rahega.</p>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp-float" onclick="openWhatsApp()">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <script>
+    function openWhatsApp() {
+      const adminNumber = "919876543210"; // apna number yaha daalo
+      const message = "Hello Admin, I need help";
+
+      const url =
+        "https://wa.me/" +
+        adminNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>

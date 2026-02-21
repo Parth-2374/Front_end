@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  body{
+    background:#081b29;
+    color:#ededed;
+  }
+  
+  /* HEADER */
+  .header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#081b29;
+    z-index:100;
+  }
+  
+  .logo{ font-size:26px; }
+  
+  nav{
+    display:flex;
+  }
+  
+  nav a{
+    margin-left:30px;
+    color:#ededed;
+    text-decoration:none;
+  }
+  
+  .menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+  }
+  
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    padding:120px 10% 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+  .hero-text h1 span{ color:#00abf0; }
+  .hero-text h3{ color:#00abf0; }
+  
+  .btn{
+    display:inline-block;
+    padding:10px 25px;
+    background:#00abf0;
+    color:#081b29;
+    text-decoration:none;
+    border-radius:8px;
+    margin-right:15px;
+  }
+  
+  .btn.outline{
+    background:transparent;
+    border:2px solid #00abf0;
+    color:#00abf0;
+  }
+  
+  .hero-img img{
+    width:300px;
+    border-radius:50%;
+  }
+  
+  /* SECTIONS */
+  section{
+    padding:80px 10%;
+  }
+  
+  .title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+  }
+  .title span{ color:#00abf0; }
+  
+  /* ABOUT */
+  .about-box{
+    text-align:center;
+    max-width:600px;
+    margin:auto;
+  }
+  .about-box img{
+    width:200px;
+    border-radius:50%;
+  }
+  
+  /* JOURNEY */
+  .journey-row{
+    display:flex;
+    gap:40px;
+  }
+  .journey-card{
+    border:2px solid #00abf0;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+  }
+  
+  /* SKILLS */
+  .skills-row{
+    display:flex;
+    gap:40px;
+  }
+  .skill{ margin-bottom:15px; }
+  .bar{
+    background:#112e42;
+    height:10px;
+    border-radius:10px;
+  }
+  .bar div{
+    background:#00abf0;
+    height:100%;
+    border-radius:10px;
+  }
+  
+  /* CONTACT */
+  .contact form{
+    max-width:700px;
+    margin:auto;
+  }
+  .input-box{
+    display:flex;
+    gap:20px;
+  }
+  input, textarea{
+    width:100%;
+    padding:10px;
+    background:#112e42;
+    border:none;
+    color:white;
+    margin-bottom:15px;
+  }
+  
+  /* FOOTER */
+  footer{
+    text-align:center;
+    padding:20px;
+  }
+  
+  /* ANIMATION */
+  .animate{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.8s;
+  }
+  .animate.show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+  /* MOBILE PERFECT */
+  @media(max-width:900px){
+    .menu-btn{ display:block; }
+  
+    nav{
+      position:absolute;
+      top:70px;
+      right:0;
+      background:#081b29;
+      width:100%;
+      flex-direction:column;
+      display:none;
+    }
+  
+    nav.active{ display:flex; }
+  
+    nav a{
+      padding:15px;
+      text-align:center;
+    }
+  
+    .hero{
+      flex-direction:column;
+      text-align:center;
+    }
+  
+    .hero-img img{
+      width:220px;
+      margin-top:30px;
+    }
+  
+    .journey-row,
+    .skills-row{
+      flex-direction:column;
+    }
+  
+    .input-box{
+      flex-direction:column;
+    }
+  }
+  

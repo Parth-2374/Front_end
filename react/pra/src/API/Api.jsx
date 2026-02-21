@@ -2,7 +2,7 @@ import React, { useEffect, useState }  from 'react'
 
 function Api() {
     const[user,setuser] =useState([])
-
+    
     useEffect(()=>{
         fectdata()
     },[])

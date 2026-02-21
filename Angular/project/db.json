@@ -1,0 +1,42 @@
+{
+  "user": [
+    {
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "12345",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "user1",
+      "email": "use1r@gmail.com",
+      "password": "45678"
+    },
+    {
+      "id": "1770549173308",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 1770551431786,
+      "name": "user3",
+      "email": "user4@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "santoor",
+      "title": "best-soap",
+      "img": ""
+    },
+    {
+      "id": "2",
+      "name": "dettol",
+      "title": "best-soap",
+      "img": ""
+    }
+  ]
+}

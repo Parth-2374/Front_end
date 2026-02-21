@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image CAPTCHA</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .captcha-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    canvas {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 8px;
+      width: 160px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    #msg {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="captcha-box">
+    <canvas id="captchaCanvas" width="200" height="60"></canvas><br>
+
+    <input type="text" id="captchaInput" placeholder="Enter CAPTCHA"><br>
+
+    <button onclick="checkCaptcha()">Verify</button>
+    <button onclick="generateCaptcha()">Refresh</button>
+
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    let captcha = "";
+
+    function generateCaptcha() {
+      const canvas = document.getElementById("captchaCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Background
+      ctx.fillStyle = "#eeeeee";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+      captcha = "";
+
+      for (let i = 0; i < 4; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+
+      // Draw captcha text
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "#000";
+
+      for (let i = 0; i < captcha.length; i++) {
+        ctx.save();
+        ctx.translate(40 * i + 25, 40);
+        ctx.rotate((Math.random() - 0.5) * 0.5);
+        ctx.fillText(captcha[i], 0, 0);
+        ctx.restore();
+      }
+
+      // Noise lines
+      for (let i = 0; i < 6; i++) {
+        ctx.strokeStyle = "rgba(0,0,0,0.3)";
+        ctx.beginPath();
+        ctx.moveTo(Math.random() * 200, Math.random() * 60);
+        ctx.lineTo(Math.random() * 200, Math.random() * 60);
+        ctx.stroke();
+      }
+    }
+
+    function checkCaptcha() {
+      const userValue = document.getElementById("captchaInput").value;
+      const msg = document.getElementById("msg");
+
+      if (userValue === captcha) {
+        msg.style.color = "green";
+        msg.innerText = "✅ CAPTCHA Verified";
+      } else {
+        msg.style.color = "red";
+        msg.innerText = "❌ Wrong CAPTCHA";
+        generateCaptcha();
+      }
+    }
+
+    // Generate on page load
+    generateCaptcha();
+  </script>
+
+</body>
+</html>
