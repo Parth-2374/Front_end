@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Hp Laptop",
+      "price": 50000,
+      "img": "https://www.shutterstock.com/image-photo/kyiv-ukraine-fabruary-28th-2017-260nw-590283734.jpg",
+      "productDetails": "HP 15 13th Gen Intel Core i5 Laptop"
+    },
+    {
+      "id": "1772132819039",
+      "name": "Dell Laptop",
+      "productDetails": "Intel® Core™ 5 120U (10 cores, up to 5.0 GHz),Windows 11 Home, Single Language English,16.0-inch 16:10 FHD+ (1920x1200) Anti-Glare Non-Touch 300nits WVA/IPS Display with ComfortView",
+      "price": "70000",
+      "img": "https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/n/e/new-image-for-dell-dc16250-laptop-sl.png"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1772177056809",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "123"
+    }
+  ]
+}
